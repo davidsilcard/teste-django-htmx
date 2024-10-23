@@ -3,5 +3,6 @@ from .models import Product
 
 # Create your views here.
 def list_products(request):
-    return render(request, 'app/list_products.html')
+    products = Product.objects.all()
+    return render(request, 'app/list_products.html', {'products':products})
 

@@ -1,0 +1,11 @@
+{% if  products %}
+    <ul class="list-group">
+        {% for product in products %}
+            <li class="list-group-item">
+                {{product.name}}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h4>Nenhum produto cadastrado</h4>
+{% endif %}

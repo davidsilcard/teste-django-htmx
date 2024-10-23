@@ -17,5 +17,5 @@ def save_product(request):
     )
 
     product.save()
-
-    return HttpResponse('teste')
+    products = Product.objects.all()
+    return render(request, 'partials/components_htmx/list_all_products.html', {'products':products})
